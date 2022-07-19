@@ -67,7 +67,7 @@ abstract class VideoMediaEncoder<C extends VideoConfig> extends MediaEncoder {
                 MediaCodecInfo.CodecCapabilities.COLOR_FormatSurface);
         format.setInteger(MediaFormat.KEY_BIT_RATE, mConfig.bitRate);
         format.setInteger(MediaFormat.KEY_FRAME_RATE, mConfig.frameRate);
-        format.setInteger(MediaFormat.KEY_I_FRAME_INTERVAL, 1); // seconds between key frames!
+        format.setInteger(MediaFormat.KEY_I_FRAME_INTERVAL, 5); // seconds between key frames!
         format.setInteger("rotation-degrees", mConfig.rotation);
 
         try {
